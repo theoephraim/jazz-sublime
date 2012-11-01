@@ -1,0 +1,28 @@
+{ "name": "Jazz Templates",
+  "scopeName": "text.jazz",
+  "fileTypes": ["jazz"],
+  "patterns": [
+  	{	"name": "source.jazz",
+  		"begin": "\\{",
+  		"end": "\\}",
+  		"patterns":[
+  			{	"match" : "\\b(if|else|elif|end|foreach|in)\\b",
+  				"name" : "keyword.control.jazz"
+  			},
+  			{	"match" : "\\b(not|and|or|eq|neq)\\b",
+  				"name" : "keyword.operator.jazz"
+  			},
+  			{	"begin" : "'",
+  				"end" : "'",
+  				"name" : "string.quoted.single"
+  			},
+  			{	"begin" : "\"",
+  				"end" : "\"",
+  				"name" : "string.quoted.double"
+  			}
+  		]
+  	},
+  	{ "include": "text.html.basic" }
+  ],
+  "uuid": "2727ed58-84ae-4931-b874-b176a36c6b77"
+}
